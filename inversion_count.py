@@ -60,17 +60,17 @@ def merge_and_count(va, vb):
             break
     return vc
 
-# "main"
-def contagem_de_inversões(va):
+# contagem_de_inversões
+def count_inversions(va):
     #print(va)
     if(len(va) > 1):
         esq, dir = divide(va)
         #print(esq)
         #print(dir)
 
-        esq = contagem_de_inversões(esq)
+        esq = count_inversions(esq)
         
-        dir = contagem_de_inversões(dir)
+        dir = count_inversions(dir)
         
         vmerge = merge_and_count(esq, dir)
         print(vmerge)
@@ -81,20 +81,3 @@ def contagem_de_inversões(va):
         va.insert(0, 0)
         #print(va)
         return va
-
-
-
-
-
-
-
-
-
-
-
-
-va = [4, 3, 2, 1]
-
-
-contagem_de_inversões(va)
-
