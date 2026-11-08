@@ -1,0 +1,1 @@
+# G11_Dividir_e_Conquistar_PA-26.2
