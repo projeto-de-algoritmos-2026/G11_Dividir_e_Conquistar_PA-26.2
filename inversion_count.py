@@ -73,7 +73,6 @@ def count_inversions(va):
         dir = count_inversions(dir)
         
         vmerge = merge_and_count(esq, dir)
-        print(vmerge)
         return vmerge
 
     # se apenas um elemento no vetor
