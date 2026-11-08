@@ -32,16 +32,30 @@ Para determinar o grau de concordância entre duas preferências, o sistema mode
 ## Vídeo de Apresentação
 
 Gravação da apresentação e demonstração do projeto:  
-> 📹 **Link do Vídeo:** [link da gravação]()
+> 📹 **Link do Vídeo:** [link da gravação](https://youtu.be/Z1op8zdjVkc)
 
 ---
 
 ## Screenshots
 
-<!--p align="center">
-  <i>(Adicione aqui as capturas de tela do sistema em execução)</i>
+<p align="center">
+  <img src="imgs/1.png" alt="Screenshot 1">
+  <br>
+  <i>Interface de seleção e ranqueamento dos filmes</i>
 </p>
--->
+
+<p align="center">
+  <img src="imgs/2.png" alt="Screenshot 2">
+  <br>
+  <i>Resultado do match e perfis recomendados</i>
+</p>
+
+<p align="center">
+  <img src="imgs/3.png" alt="Screenshot 3">
+  <br>
+  <i>Detalhamento dos pares invertidos e cálculo de similaridade</i>
+</p>
+
 
 ---
 
