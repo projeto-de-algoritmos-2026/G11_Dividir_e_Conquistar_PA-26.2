@@ -7,11 +7,9 @@ def divide(va):
         p = tamanho // 2
     else:
         p = (tamanho // 2) + 1
-    p + 1
     vb = va[:p]
     vc = va[p:]
-    print(vb)
-    print(vc)    
+    return vb, vc  
         
 # rec esq
 # rec dir
@@ -26,8 +24,8 @@ def merge_and_count(va, vb):
     ta = len(va) - 1
     tb = len(vb) - 1 
     custo = ta
-    print("custo inicial:")
-    print(custo)
+    #print("custo inicial:")
+    #print(custo)
     i = 1
     j = 1
     terminou = False
@@ -46,14 +44,14 @@ def merge_and_count(va, vb):
             terminou = True
             break
         if (i > ta):
-            print("A")
+            #print("A")
             while(j <= tb):
                 vc.append(vb[j])
                 j += 1
             terminou = True
             break
         if (j > tb):
-            print("B")
+            #print("B")
             custo = 0
             while(i <= ta):
                 vc.append(va[i])
@@ -62,7 +60,41 @@ def merge_and_count(va, vb):
             break
     return vc
 
-va = [1, 2, 4, 56, 200, 9, 7]
-vb = [1, 1, 4]
+# "main"
+def contagem_de_inversões(va):
+    #print(va)
+    if(len(va) > 1):
+        esq, dir = divide(va)
+        #print(esq)
+        #print(dir)
 
-divide(va)
+        esq = contagem_de_inversões(esq)
+        
+        dir = contagem_de_inversões(dir)
+        
+        vmerge = merge_and_count(esq, dir)
+        print(vmerge)
+        return vmerge
+
+    # se apenas um elemento no vetor
+    else:
+        va.insert(0, 0)
+        #print(va)
+        return va
+
+
+
+
+
+
+
+
+
+
+
+
+va = [4, 3, 2, 1]
+
+
+contagem_de_inversões(va)
+
