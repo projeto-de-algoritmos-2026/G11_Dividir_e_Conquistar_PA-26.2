@@ -1,7 +1,18 @@
 # arquivo algoritmo de contagem de inversões
 
 # divide meio (se par) ou meio + 1 (se impar)
-
+def divide(va):
+    tamanho = len(va)
+    if(tamanho % 2 == 0):
+        p = tamanho // 2
+    else:
+        p = (tamanho // 2) + 1
+    p + 1
+    vb = va[:p]
+    vc = va[p:]
+    print(vb)
+    print(vc)    
+        
 # rec esq
 # rec dir
 
@@ -9,39 +20,6 @@
 # então: coloca num vetor onde o primeiro numero é o numero de inversões (começa em zero)
 
 # se dois vetores existentes de mesmo lado então:
-# Merge and Count: Va []  Vb []
-# vc []
-# custo = length Va -1
-# ta = length(Va[])
-# tb = length(Vb[])
-# i = 1
-# j = 1
-# terminou = False
-# vc[0] = Va[0] + Vb[0] 
-# while(terminou == False):
-#    if Va [i] <= Vb [j]: 
-#       custo =- 1
-#       vc.append(Va[i])
-#       i++
-#   else:
-#       vc[0] = vc[0] + custo
-#       vc.append(Vb[j])
-#       j++
-#   if(i > ta and j > tb):
-#       terminou = True
-#   elif(i > ta):
-#       while(tb <= j):
-#           vc.append(Vb[j])
-#           j++
-#       terminou = True
-#   elif(j > tb):
-#       custo = 0
-#       while(ta <= i):
-#           vc.append(Va[i])
-#           i++
-#       terminou = True
-# return vc[]
-
 # Função que roda Merge and Count a partir de um vetor A e um vetor B e retorna um vetor C
 def merge_and_count(va, vb):
     vc = [0]
@@ -84,9 +62,7 @@ def merge_and_count(va, vb):
             break
     return vc
 
-va = [1, 2, 5]
+va = [1, 2, 4, 56, 200, 9, 7]
 vb = [1, 1, 4]
 
-vc = merge_and_count(va, vb)
-
-print(vc)
+divide(va)
